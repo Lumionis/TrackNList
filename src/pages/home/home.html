@@ -1,45 +1,54 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>{{test}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2> {{test}}</h2>
-  <p>
-   
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <ion-list>
+  <h2>Salut {{user}} </h2>
+<ion-grid>
+  <ion-row>
+    <ion-col class="media"  >
+
+      <button ion-button round id="ajouterMusique">Ajouter une musique</button>
+    </ion-col>
+
+
+    
+  </ion-row>
+</ion-grid>
+
+  <ion-list class="media">
     <ion-item>
-        <ion-label color="primary">Inline Label</ion-label>
-        <ion-input placeholder="Text Input"></ion-input>
-      </ion-item>
+      <ion-input type="image" src="../../assets/imgs/trash.png" width =20px height=20px></ion-input>
+      <ion-label color="primary">Gilé jauné</ion-label>
+    </ion-item>
     <br/>
       <ion-item>
-          <ion-label color="primary">Inline Label</ion-label>
+          <ion-label color="primary">Musique 2</ion-label>
           <ion-input placeholder="Text Input"></ion-input>
         </ion-item>
       <ion-item></ion-item>
         <ion-item>
-            <ion-label color="primary">Inline Label</ion-label>
+            <ion-label color="primary">Musique 3</ion-label>
             <ion-input placeholder="Text Input"></ion-input>
           </ion-item>
           <ion-item>
-              <ion-label color="primary">Inline Label</ion-label>
+              <ion-label color="primary">Musique 4</ion-label>
               <ion-input placeholder="Text Input"></ion-input>
             </ion-item>
+            
   </ion-list>
 
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
-  <ion-list>
-      <ion-item>
-          <ion-label color="primary">Inline Label</ion-label>
-          <ion-input placeholder="Text Input"></ion-input>
-        </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="media">
+        <input type="image" src="../../assets/imgs/previous.png"  width="50" height="40" padding-right="10" />
+        <input type="image" src="../../assets/imgs/play.png" width="50" height="40" padding-right="10" />
+        <input type="image" src="../../assets/imgs/next.png" width="50" height="40" padding-right="10" />
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ 
 </ion-content>
