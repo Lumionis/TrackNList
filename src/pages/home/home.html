@@ -6,48 +6,92 @@
 
 <ion-content padding>
   <h2>Salut {{user}} </h2>
-<ion-grid>
-  <ion-row>
-    <ion-col class="media"  >
-
-      <button ion-button round id="ajouterMusique">Ajouter une musique</button>
-    </ion-col>
-
-
-    
-  </ion-row>
-</ion-grid>
-
-  <ion-list class="media">
-    <ion-item>
-      <ion-input type="image" src="../../assets/imgs/trash.png" width =20px height=20px></ion-input>
-      <ion-label color="primary">Gilé jauné</ion-label>
-    </ion-item>
-    <br/>
-      <ion-item>
-          <ion-label color="primary">Musique 2</ion-label>
-          <ion-input placeholder="Text Input"></ion-input>
-        </ion-item>
-      <ion-item></ion-item>
-        <ion-item>
-            <ion-label color="primary">Musique 3</ion-label>
-            <ion-input placeholder="Text Input"></ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label color="primary">Musique 4</ion-label>
-              <ion-input placeholder="Text Input"></ion-input>
-            </ion-item>
-            
-  </ion-list>
-
   <ion-grid>
     <ion-row>
-      <ion-col class="media">
-        <input type="image" src="../../assets/imgs/previous.png"  width="50" height="40" padding-right="10" />
-        <input type="image" src="../../assets/imgs/play.png" width="50" height="40" padding-right="10" />
-        <input type="image" src="../../assets/imgs/next.png" width="50" height="40" padding-right="10" />
+      <ion-col class="media"  >
+
+        <button ion-button round id="ajouterMusique">Ajouter une musique</button>
       </ion-col>
+    
+    
+    
     </ion-row>
+  </ion-grid>
+
+  <ion-list class="media">
+
+         
+      
+      
+      <button class="item item-md" ion-item>
+          <ion-avatar item-start>
+              <img src="../../assets/imgs/smog.jpg" class="pochette"/>
+          </ion-avatar>
+          <ion-list item-start>
+              <ion-label> Smog</ion-label>
+              <ion-label color="#92929"> Lithopédion</ion-label>
+          </ion-list>
+        </button >
+
+        <button class="item item-block item-md" item-start>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/smog.jpg" class="pochette"/>
+            </ion-avatar>
+            <ion-list item-start>
+                <ion-label> Smog</ion-label>
+                <ion-label color="#92929"> Lithopédion</ion-label>
+            </ion-list >
+        </button>
+
+         <!-- Item with an avatar on the left and button on the right -->
+         <ion-item item-start>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/smog.jpg" class="pochette"/>
+            </ion-avatar>
+                <ion-label color="#92929"> Lithopédion</ion-label>
+          </ion-item>
+
+          <button class="item item-block item-md" ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/smog.jpg">
+              </ion-avatar>
+              <h3>Damso</h3>
+              <h3>Feux de Bois</h3>
+              <p>Lithopédion</p>
+            </button>
+
+          
+
+         <ion-item item-start type="button">
+            <ion-avatar >
+              <img src="../../assets/imgs/smog.jpg">
+            </ion-avatar>
+             Smog
+            <button ion-button outline item-end>View</button>
+          </ion-item>
+
+        <button class="item item-block item-md" ion-item>
+            <ion-avatar item-start>
+                <img src="../../assets/imgs/smog.jpg" class="pochette"/>
+            </ion-avatar>
+            <ion-list item-start>
+                <ion-label> Smog</ion-label>
+                <ion-label color="#92929"> Lithopédion</ion-label>
+            </ion-list >
+          </button>
+
+          
+           
+          
+  </ion-list>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="media">
+        <input type="image" src="../../assets/imgs/previous.png" width="50" height="40" padding-right="10" />
+        <input type="image" src="../../assets/imgs/play.png" width="50" height="40" padding-right="10" />
+        <input type="image" src="../../assets/imgs/next.png" width="50" height="40" padding-right="10" />        </ion-col>
+      </ion-row>
   </ion-grid>
 
  

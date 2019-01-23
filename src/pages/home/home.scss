@@ -1,4 +1,9 @@
 page-home {
+    label
+    {
+        color: map-get($colors, primary);
+        
+    }
 
     h2 {
         width: 100%;
@@ -11,8 +16,14 @@ page-home {
 
     .icone{
 
-        width : 10px;
-        height : 10px;
+        width : 20px;
+        height : 20px;
+    }
+
+    .pochette{
+
+        width : 40px;
+        height : 40px;
     }
 
 
