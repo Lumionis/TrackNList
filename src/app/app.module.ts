@@ -8,9 +8,12 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MusicComponent} from '../components/music/music';
+import { SearchPage} from '../pages/search/search';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MusicProvider } from '../providers/music/music';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    MusicComponent
+    MusicComponent,
+    SearchPage
+    
   ],
   imports: [
     BrowserModule,
@@ -32,12 +37,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    MusicComponent
+    MusicComponent,
+    SearchPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    MusicProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

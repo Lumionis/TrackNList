@@ -10,16 +10,17 @@
     <ion-row>
       <ion-col class="media"  >
 
-        <button ion-button round id="ajouterMusique">Ajouter une musique</button>
+        <button ion-button (click)="navigate('Search')" round id="ajouterMusique">Ajouter une musique</button>
+        
       </ion-col>
     </ion-row>
   </ion-grid>
   
 
   <ion-scroll class="scroll" scrollY="true">
-    <ion-list  class="media no-padding" padding="false">
+    <ion-list  class="media no-padding" *ngFor="let obj of music; let i = index" padding="false">
 
-        <music *ngFor="let obj of music" [music]="obj"></music>
+        <music [music]="obj"></music>
 
       </ion-list>
   </ion-scroll>
