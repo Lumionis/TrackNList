@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { MusicProvider } from '../../providers/music/music';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the SearchPage page.
@@ -58,10 +59,24 @@ export class SearchPage {
       alert("La recherche à échoué"+ " : " + this.titre + this.artiste);
       console.log(error);
     }
-
   }
 
   addMusic(i){
     this.musicProvider.addMusic(this.music[i]);
+    this.navCtrl.pop();
+  }
+
+  public navigate(root){
+    console.log(root);
+
+    switch (root) {
+      
+      case 'Home': 
+      this.navCtrl.push(HomePage);
+      break;
+    
+      default:
+        break;
+    }
   }
 }

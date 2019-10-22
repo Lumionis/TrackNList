@@ -10,6 +10,7 @@ import { MusicProvider } from '../../providers/music/music';
 })
 export class HomePage {
 
+  list : Boolean;
   test : String;
   user : String;
   source : String;
@@ -38,8 +39,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, public musicProvider: MusicProvider) {
 
-    this.test = "Nom de la playlist";
-    this.user = "Florian ";
+    this.list = false;
+    this.test = "Soirée YDay";
+    this.user = "Florian";
     this.source = "../../assets/imgs/smog.jpg";
     this.music = []
   }
@@ -48,7 +50,6 @@ export class HomePage {
   ngOnInit() {
     this.listMusicChange();    
     this.musicProvider.musicChanged.subscribe((_) => {
-      console.log("ma bite")
       this.listMusicChange();
     })
   }
@@ -56,6 +57,12 @@ export class HomePage {
   listMusicChange() {
     console.log(this.music)
     this.music = this.musicProvider.playlistMusics
+    if (this.music) {
+      this.list = true;
+    } else {
+      this.list = false;
+    }
+    
   }
   
   navigate(root){
